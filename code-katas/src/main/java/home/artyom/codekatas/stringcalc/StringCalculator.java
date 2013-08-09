@@ -3,6 +3,10 @@ package home.artyom.codekatas.stringcalc;
 
 public class StringCalculator {
 
+	/**
+	 * @param inputNumbers
+	 * @return sum of the numbers. 0 on empty string.
+	 */
 	public int sum(String inputNumbers) {
 		if (inputNumbers.isEmpty())
 			return 0;
