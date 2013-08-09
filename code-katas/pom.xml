@@ -34,4 +34,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<scm>
+	<connection>scm:git:ssh://git@github.com:ArtyomKa/CodeKatas.git</connection>
+	<developerConnection>scm:git:ssh://git@github.com:ArtyomKa/CodeKatas.git</developerConnection>
+	</scm>
 </project>

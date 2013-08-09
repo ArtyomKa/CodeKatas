@@ -2,10 +2,16 @@ package home.artyom.codekatas.bankocr;
 
 public class OCRReader {
 
-	public int read(String buffer) {
+	/**
+	 * @param buffer
+	 * @return 
+	 */
+	public int[] read(String buffer) {
+		int[] result = new int[1];
 		String[] lines = buffer.split("\n");
 		validateInput(lines);
-		return 0;
+		result[0] = 0;
+		return result;
 	}
 
 	private void validateInput(String[] lines) {

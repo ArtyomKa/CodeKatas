@@ -21,7 +21,8 @@ public class OCRReaderTest {
 					      .append("| |").append("\n")
 						  .append("|_|").append("\n").toString();
 		
-		Assert.assertEquals(0, reader.read(numbers));
+		int[] expected = {0};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
 
 	}
 	@Test(expected = IllegalArgumentException.class)
