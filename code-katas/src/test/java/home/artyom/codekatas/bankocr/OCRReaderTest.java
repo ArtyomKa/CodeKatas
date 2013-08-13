@@ -21,7 +21,7 @@ public class OCRReaderTest {
 					      .append("| |").append("\n")
 						  .append("|_|").append("\n").toString();
 		
-		int[] expected = {0};
+		Digit[] expected = {Digit.ZERO};
 		Assert.assertArrayEquals(expected, reader.read(numbers));
 
 	}
@@ -47,14 +47,15 @@ public class OCRReaderTest {
 	}
 	
 	
-	@Test @Ignore
+	@Test 
 	public void testRecognizeSingel1() {
 		String numbers = 
-		new StringBuffer().append("  ").append("\n")
+		new StringBuffer().append("   ").append("\n")
 					      .append("  |").append("\n")
 						  .append("  |").append("\n").toString();
 		
-		Assert.assertEquals(1, reader.read(numbers));
+		Digit[] expected = {Digit.ONE};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
 
 	}
 
