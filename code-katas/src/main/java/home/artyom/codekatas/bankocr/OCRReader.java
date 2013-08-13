@@ -10,11 +10,14 @@ public class OCRReader {
 	 * @return 
 	 */
 	public Digit[] read(String buffer) {
-		Digit[] result = new Digit[1];
 		lines = buffer.split("\n");
 		validateInput(lines);
-		
-		result[0] = parseDigit(digitIndex(0));
+		int numberOfDigits = lines[0].length()/3;
+		Digit[] result = new Digit[numberOfDigits];
+		for (int i = 0; i < numberOfDigits; i++) {
+			result[i] = parseDigit(digitIndex(i));
+			
+		}
 		return result;
 	}
 
@@ -35,7 +38,7 @@ public class OCRReader {
 
 	private int digitIndex(int i) {
 		
-		return 0;
+		return i*3;
 	}
 
 	private void validateInput(String[] lines) {

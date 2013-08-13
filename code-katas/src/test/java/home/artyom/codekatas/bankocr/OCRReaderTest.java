@@ -58,5 +58,122 @@ public class OCRReaderTest {
 		Assert.assertArrayEquals(expected, reader.read(numbers));
 
 	}
+	
+	@Test 
+	public void testRecognizeSingel2() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append(" _|").append("\n")
+						  .append("|_ ").append("\n").toString();
+		
+		Digit[] expected = {Digit.TWO};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+	@Test 
+	public void testRecognizeSingel3() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append(" _|").append("\n")
+						  .append(" _|").append("\n").toString();
+		
+		Digit[] expected = {Digit.THREE};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+	@Test 
+	public void testRecognizeSingel4() {
+		String numbers = 
+		new StringBuffer().append("   ").append("\n")
+					      .append("|_|").append("\n")
+						  .append("  |").append("\n").toString();
+		
+		Digit[] expected = {Digit.FOUR};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+
+	@Test 
+	public void testRecognizeSingel5() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append("|_ ").append("\n")
+						  .append(" _|").append("\n").toString();
+		
+		Digit[] expected = {Digit.FIVE};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+
+	@Test 
+	public void testRecognizeSingel6() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append("|_ ").append("\n")
+						  .append("|_|").append("\n").toString();
+		
+		Digit[] expected = {Digit.SIX};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+
+	@Test 
+	public void testRecognizeSingel7() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append("  |").append("\n")
+						  .append("  |").append("\n").toString();
+		
+		Digit[] expected = {Digit.SEVEN};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+
+	@Test 
+	public void testRecognizeSingel8() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append("|_|").append("\n")
+						  .append("|_|").append("\n").toString();
+		
+		Digit[] expected = {Digit.EIGHT};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+
+	@Test 
+	public void testRecognizeSingel9() {
+		String numbers = 
+		new StringBuffer().append(" _ ").append("\n")
+					      .append("|_|").append("\n")
+						  .append(" _|").append("\n").toString();
+		
+		Digit[] expected = {Digit.NINE};
+		Assert.assertArrayEquals(expected, reader.read(numbers));
+
+	}
+	
+	@Test 
+	public void testRecognize1298() {
+		String numbers = 
+		new StringBuffer().append("    _  _  _ ").append("\n")
+					      .append("  | _||_||_|").append("\n")
+						  .append("  ||_  _||_|").append("\n").toString();
+		
+		Digit[] expected = {Digit.ONE,Digit.TWO,Digit.NINE,Digit.EIGHT};
+		
+		Digit[] result = reader.read(numbers);
+		System.out.println(result);
+		Assert.assertArrayEquals(expected, result);
+
+	}
+	
+	
 
 }

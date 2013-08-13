@@ -11,6 +11,18 @@ public class LineDigitResolver {
 		digits.put("     |  |", Digit.ONE);
 		digits.put(" _  _||_ ", Digit.TWO);
 		digits.put(" _  _| _|", Digit.THREE);
+		
+		digits.put("   |_|  |", Digit.FOUR);
+		
+		digits.put(" _ |_  _|", Digit.FIVE);
+		
+		digits.put(" _ |_ |_|", Digit.SIX);
+		
+		digits.put(" _   |  |", Digit.SEVEN);
+		
+		digits.put(" _ |_||_|", Digit.EIGHT);
+		
+		digits.put(" _ |_| _|", Digit.NINE);
 	}
 	
 	
