@@ -24,4 +24,13 @@ public class BankNumber {
 		}
 		return  sb.toString();
 	}
+
+	public boolean isValid() {
+		int sum = 0;
+		for(int i = digits.length; i > 0; i--){
+			int coeff = digits.length - i+1;
+			sum += (digits[i-1]*coeff);
+		}
+		return sum%11 == 0;
+	}
 }
